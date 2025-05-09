@@ -1,10 +1,11 @@
 package model;
 
+import java.io.*;
 import repository.IncomeList;
 import java.time.LocalDate;
 
-public class TrackingIncome{
-    private static int idCounter = 1;
+public class TrackingIncome implements Serializable {
+    private static int idCounter = 0;
 
     private int incomeId;
     private String incomeSource;
@@ -43,6 +44,14 @@ public class TrackingIncome{
     
     public double getIncomeAmount() {
         return incomeAmount;
+    }
+
+    public String getIncomeSource() {
+        return incomeSource;
+    }
+    
+    public LocalDate getIncomeDate() {
+        return incomeDate;
     }
     
     public void saveIncome(IncomeList incomeList){

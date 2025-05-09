@@ -1,15 +1,15 @@
 package service;
 import model.User;
-import repository.UserRepository;
+import repository.FileUserRepository;
 
 public class AuthService {
-    private final UserRepository userRepository;
+    private final FileUserRepository userRepository;
     private final ValidationStrategy[] validators;
     private String currentOTP;
     public String getCurrentOTP() {
         return currentOTP;
     }
-    public AuthService(UserRepository userRepository, ValidationStrategy... validators) {
+    public AuthService(FileUserRepository userRepository, ValidationStrategy... validators) {
         this.userRepository = userRepository;
         this.validators = validators;
     }
