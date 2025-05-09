@@ -1,9 +1,10 @@
 package model;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Reminder {
+public class Reminder implements Serializable {
     private String title;
     private LocalDate date;
     private LocalTime time;

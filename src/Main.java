@@ -1,5 +1,6 @@
 import model.User;
 import model.TrackingIncome;
+import repository.BudgetManager;
 import repository.FileUserRepository;
 import service.*;
 import repository.ReminderManager;
@@ -90,6 +91,7 @@ public class Main {
             System.out.println("1. Income Page");
             System.out.println("2. Expense Page");
             System.out.println("3. Reminder Page");
+            System.out.println("4. Budget Page");
             System.out.println("0. Logout");
             System.out.print("Choose: ");
             int mainChoice = Integer.parseInt(scanner.nextLine());
@@ -236,6 +238,47 @@ public class Main {
                             }
                             default -> System.out.println("Invalid option.");
                         }   
+                        if (reminderChoice == 0) break;
+                    }
+                }
+                case 4 -> {
+                    BudgetManager manager = new BudgetManager(
+                        currentUser.getBudgets(),
+                        currentUser.getSpendingRecords()
+                    );
+                    // Optionally, load budgets from the user if you store them
+                    while (true) {
+                        System.out.println("\n--- Budget Page ---");
+                        System.out.println("1. Set Budget");
+                        System.out.println("2. Add Spending");
+                        System.out.println("3. Display Budgets");
+                        System.out.println("4. Generate Spending Analysis");
+                        System.out.println("0. Back");
+                        System.out.print("Choose: ");
+                        int budgetChoice = Integer.parseInt(scanner.nextLine());
+                        switch (budgetChoice) {
+                            case 1 -> {
+                                System.out.print("Enter category: ");
+                                String category = scanner.nextLine();
+                                System.out.print("Enter budget amount: ");
+                                double amount = Double.parseDouble(scanner.nextLine());
+                                manager.setBudget(category, amount);
+                                repository.saveUsers();
+                            }
+                            case 2 -> {
+                                System.out.print("Enter category: ");
+                                String category = scanner.nextLine();
+                                System.out.print("Enter spending amount: ");
+                                double amount = Double.parseDouble(scanner.nextLine());
+                                manager.addSpending(category, amount);
+                                repository.saveUsers();
+                            }
+                            case 3 -> manager.displayBudgets();
+                            case 4 -> manager.generateSpendingAnalysis();
+                            case 0 -> { break; }
+                            default -> System.out.println("Invalid option.");
+                        }
+                        if (budgetChoice == 0) break;
                     }
                 }
                 case 0 -> {
