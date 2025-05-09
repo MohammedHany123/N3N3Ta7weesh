@@ -26,7 +26,7 @@ public class Main {
         User currentUser = null;
 
         while (true) {
-            System.out.println("\n=== Welcome to Budget Tracker App ===");
+            System.out.println("\n=== Welcome to N3N3Ta7weesh ===");
             System.out.println("1. Register");
             System.out.println("2. Login");
             System.out.println("0. Exit");
