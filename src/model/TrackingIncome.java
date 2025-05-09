@@ -1,5 +1,6 @@
 package model;
 
+import repository.IncomeList;
 import java.time.LocalDate;
 
 public class TrackingIncome{

@@ -18,7 +18,10 @@ public class AuthService {
         if (userRepository.findByEmail(user.getEmail()) != null) return false;
         
         for (ValidationStrategy validator : validators) {
-            if (!validator.validate(user)) return false;
+            //if (!validator.validate(user)) return false;
+            boolean result = validator.validate(user);
+            System.out.println(validator.getClass().getSimpleName() + " => " + result);
+            if (!result) return false;
         }
         
         generateOTP(user.getPhone());
