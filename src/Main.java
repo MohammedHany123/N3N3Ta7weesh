@@ -2,6 +2,7 @@ import model.User;
 import model.TrackingIncome;
 import repository.FileUserRepository;
 import service.*;
+import repository.ReminderManager;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -88,6 +89,7 @@ public class Main {
             System.out.println("\n=== Dashboard ===");
             System.out.println("1. Income Page");
             System.out.println("2. Expense Page");
+            System.out.println("3. Reminder Page");
             System.out.println("0. Logout");
             System.out.print("Choose: ");
             int mainChoice = Integer.parseInt(scanner.nextLine());
@@ -195,6 +197,45 @@ public class Main {
                             default -> System.out.println("Invalid option.");
                         }
                         if (expenseChoice == 0) break;
+                    }
+                }
+                case 3 -> {
+                    ReminderManager reminderManager = new ReminderManager();
+                    reminderManager.getReminders().addAll(currentUser.getReminders());
+                    
+                    while (true){
+                        System.out.println("\n--- Reminder Page ---");
+                        System.out.println("1. Add Reminder");
+                        System.out.println("2. View Reminders");
+                        System.out.println("3. Delete Reminder");
+                        System.out.println("0. Back");
+                        System.out.print("Choose: ");
+                        int reminderChoice = Integer.parseInt(scanner.nextLine());
+                        
+                        switch (reminderChoice) {
+                            case 1 -> {
+                                reminderManager.createReminder(scanner);
+                                currentUser.getReminders().clear();
+                                currentUser.getReminders().addAll(reminderManager.getReminders());
+                                repository.saveUsers();
+                            }
+                            case 2 -> {
+                                reminderManager.displayReminders();
+                            }
+                            case 3 -> {
+                                reminderManager.deleteReminder(scanner);
+                                currentUser.getReminders().clear();
+                                currentUser.getReminders().addAll(reminderManager.getReminders());
+                                repository.saveUsers();
+                            }
+                            case 0 -> {
+                                currentUser.getReminders().clear();
+                                currentUser.getReminders().addAll(reminderManager.getReminders());
+                                repository.saveUsers();
+                                break;
+                            }
+                            default -> System.out.println("Invalid option.");
+                        }   
                     }
                 }
                 case 0 -> {
