@@ -30,6 +30,7 @@ public class Main {
                 case 6 -> System.out.println("Total: " + tracker.calculateTotal() + " EGP");
                 case 0 -> {
                     System.out.println("Goodbye!");
+                    scanner.close();
                     return;
                 }
                 default -> System.out.println("Invalid option.");
