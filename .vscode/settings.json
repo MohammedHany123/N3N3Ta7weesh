@@ -1,21 +1,8 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "java.project.sourcePaths": [
         "src"
     ],
-=======
-    "java.project.sourcePaths": ["src"],
->>>>>>> Reminders
-    "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "C:/javafx-sdk-24.0.1/lib/*.jar"
     ]
-=======
-    "java.project.sourcePaths": [
-        "src"
-    ],
-    "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": []
->>>>>>> BudgetTracking
 }

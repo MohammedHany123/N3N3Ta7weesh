@@ -35,4 +35,9 @@ public class Expense implements Serializable {
     public void display(){
         System.out.println(category + " - " + amount + " EGP via " + paymentMethod + " on " + date);
     }
+
+    @Override
+    public String toString() {
+        return category + " - " + amount + " EGP via " + paymentMethod + " on " + date;
+    }
 }

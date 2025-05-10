@@ -29,6 +29,6 @@ public class Reminder implements Serializable {
 
     @Override
     public String toString() {
-        return "Reminder: " + title + " at " + date + " " + time;
+        return title + " at " + date + " " + time;
     }
 }
