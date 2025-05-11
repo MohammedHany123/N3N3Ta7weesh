@@ -8,11 +8,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Tracks and manages a list of expenses, supporting add, update, delete, display, and categorization.
+ */
 public class ExpenseTracker implements Tracker {
     private List<Expense> expensesList = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
+    /**
+     * Adds a new expense entry from user input.
+     */
     @Override
     public void addEntry() {
         try {
@@ -38,6 +44,10 @@ public class ExpenseTracker implements Tracker {
         }
     }
 
+    /**
+     * Updates an existing expense entry at the specified index.
+     * @param index the index of the expense to update
+     */
     public void updateEntry(int index) {
         if (index < 0 || index >= expensesList.size()) {
             System.out.println("Invalid index.");
@@ -66,6 +76,9 @@ public class ExpenseTracker implements Tracker {
         }
     }
 
+    /**
+     * Deletes an expense entry based on user input.
+     */
     @Override
     public void deleteEntry() {
         System.out.print("Enter index to delete: ");
@@ -79,16 +92,27 @@ public class ExpenseTracker implements Tracker {
         }
     }
 
+    /**
+     * Gets all expense entries.
+     * @return the list of expenses
+     */
     @Override
     public List<Expense> getEntries() {
         return expensesList;
     }
 
+    /**
+     * Calculates the total amount of all expenses.
+     * @return the total expense amount
+     */
     @Override
     public double calculateTotal() {
         return expensesList.stream().mapToDouble(Expense::getAmount).sum();
     }
 
+    /**
+     * Displays all expenses in the list.
+     */
     public void displayAll() {
         for (int i = 0; i < expensesList.size(); i++) {
             System.out.print("[" + i + "] ");
@@ -96,6 +120,9 @@ public class ExpenseTracker implements Tracker {
         }
     }
 
+    /**
+     * Categorizes and displays total expenses by category.
+     */
     public void categorizeExpenses() {
         System.out.println("\nExpenses by Category:");
         expensesList.stream()

@@ -10,7 +10,19 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
+/**
+ * The entry point for the N3N3Ta7weesh application.
+ * <p>
+ * Provides a console-based interface for user registration, login, and access to
+ * income, expense, reminder, and budget management features.
+ * </p>
+ */
 public class Main {
+    /**
+     * The main method that starts the application and handles user interaction.
+     *
+     * @param args the command-line arguments (not used)
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -83,6 +95,13 @@ public class Main {
         }
     }
 
+    /**
+     * Displays the dashboard and handles navigation to income, expense, reminder, and budget pages.
+     *
+     * @param scanner     the Scanner for user input
+     * @param currentUser the currently logged-in user
+     * @param repository  the user repository for saving data
+     */
     private static void dashboard(Scanner scanner, User currentUser, FileUserRepository repository) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
