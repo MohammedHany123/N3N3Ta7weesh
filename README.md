@@ -1,22 +1,64 @@
+# N3N3Ta7weesh – Terminal Version
+
+A personal budgeting application developed by the Ne3Na3 team. This terminal-based Java application allows users to manage their finances efficiently through a command-line interface.
+
+## Features
+
+- **User Authentication**: Register and log in securely.
+- **Income & Expense Tracking**: Add, view, and manage your financial records.
+- **Data Persistence**: Utilizes Java serialization for storing user data.
+
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Prerequisites
 
-## Folder Structure
+- Java Development Kit (JDK) 8 or higher.
+- A terminal or command-line interface.
 
-The workspace contains two folders by default, where:
+### Installation
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+1. **Clone the Repository**:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+   ```bash
+   git clone https://github.com/MohammedHany123/N3N3Ta7weesh.git
+   cd N3N3Ta7weesh
+   ```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+2. **Compile the Application**:
+    ```bash
+    javac -d bin src/**/*.java
+    ```
 
-## Dependency Management
+3. **Run the Application**:
+   ```bash
+   java -cp bin Main
+   ```
 
-<<<<<<< HEAD
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-=======
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
->>>>>>> BudgetTracking
+## Usage
+Upon running the application:
+**1. Register:** Create a new account by providing your email, username, password, and phone number.
+**2. Login:** Access your account using your credentials.
+**3. Dashboard:** Navigate through options to add income, add expenses, view records, or logout.
+
+## Project Structure
+
+```css
+N3N3Ta7weesh/
+├── src/
+│   ├── model/
+│   ├── repository/
+│   ├── service/
+│   └── Main.java
+├── bin/
+├── doc/
+├── .vscode/
+└── README.md
+```
+
+## Authors
+- [Mohammed Hany](https://github.com/MohammedHany123)
+- [Ahmed Samir](https://github.com/Ahmed-Samir11)
+- [Loay Medhat](https://github.com/LoayMedhat)
+
+## License
+This project is licensed under the MIT License.
