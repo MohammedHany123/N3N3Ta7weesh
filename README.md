@@ -36,9 +36,9 @@ A personal budgeting application developed by the Ne3Na3 team. This terminal-bas
 
 ## Usage
 Upon running the application:
-**1. Register:** Create a new account by providing your email, username, password, and phone number.
-**2. Login:** Access your account using your credentials.
-**3. Dashboard:** Navigate through options to add income, add expenses, view records, or logout.
+- **Register:** Create a new account by providing your email, username, password, and phone number.
+- **Login:** Access your account using your credentials.
+- **Dashboard:** Navigate through options to add income, add expenses, view records, or logout.
 
 ## Project Structure
 
