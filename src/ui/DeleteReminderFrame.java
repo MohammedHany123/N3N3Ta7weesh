@@ -6,7 +6,18 @@ import repository.FileUserRepository;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A frame for deleting a reminder.
+ * <p>
+ * Allows the user to select and delete a reminder.
+ * </p>
+ */
 public class DeleteReminderFrame extends JFrame {
+    /**
+     * Constructs the DeleteReminderFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public DeleteReminderFrame(User user, FileUserRepository repository) {
         setTitle("Delete Reminder");
         setSize(500, 300);

@@ -2,7 +2,5 @@
     "java.project.sourcePaths": [
         "src"
     ],
-    "java.project.referencedLibraries": [
-        "C:/javafx-sdk-24.0.1/lib/*.jar"
-    ]
+    "javascript.suggest.completeJSDocs": true
 }

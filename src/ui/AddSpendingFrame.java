@@ -6,7 +6,18 @@ import repository.FileUserRepository;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A frame for adding a new spending record.
+ * <p>
+ * Allows the user to enter spending details and save them.
+ * </p>
+ */
 public class AddSpendingFrame extends JFrame {
+    /**
+     * Constructs the AddSpendingFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public AddSpendingFrame(User user, FileUserRepository repository) {
         setTitle("Add Spending");
         setSize(350, 225);

@@ -6,7 +6,17 @@ import model.TrackingIncome;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A frame for displaying the income summary.
+ * <p>
+ * Shows a table of all incomes and the total.
+ * </p>
+ */
 public class IncomeSummaryFrame extends JFrame {
+    /**
+     * Constructs the IncomeSummaryFrame.
+     * @param user the current user
+     */
     public IncomeSummaryFrame(User user) {
         setTitle("Income Summary");
         setSize(500, 300);

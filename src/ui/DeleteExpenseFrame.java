@@ -6,7 +6,18 @@ import repository.FileUserRepository;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A frame for deleting an expense.
+ * <p>
+ * Allows the user to select and delete an expense record.
+ * </p>
+ */
 public class DeleteExpenseFrame extends JFrame {
+    /**
+     * Constructs the DeleteExpenseFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public DeleteExpenseFrame(User user, FileUserRepository repository) {
         setTitle("Delete Expense");
         setSize(500, 350);

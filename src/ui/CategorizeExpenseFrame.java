@@ -7,7 +7,17 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * A frame for displaying categorized expenses.
+ * <p>
+ * Shows a table of total expenses by category.
+ * </p>
+ */
 public class CategorizeExpenseFrame extends JFrame {
+    /**
+     * Constructs the CategorizeExpenseFrame.
+     * @param user the current user
+     */
     public CategorizeExpenseFrame(User user) {
         setTitle("Categorize Expenses");
         setSize(400, 300);

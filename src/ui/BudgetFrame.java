@@ -5,7 +5,18 @@ import repository.FileUserRepository;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The main budget management frame.
+ * <p>
+ * Allows the user to set budgets, add spending, display budgets, and analyze spending.
+ * </p>
+ */
 public class BudgetFrame extends JFrame {
+    /**
+     * Constructs the BudgetFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public BudgetFrame(User user, FileUserRepository repository) {
         setTitle("Budget Page");
         setSize(350, 300);

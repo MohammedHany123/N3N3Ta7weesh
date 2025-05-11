@@ -5,7 +5,18 @@ import repository.FileUserRepository;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The main expense management frame.
+ * <p>
+ * Allows the user to add, view, edit, delete, and categorize expenses.
+ * </p>
+ */
 public class ExpenseFrame extends JFrame {
+    /**
+     * Constructs the ExpenseFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public ExpenseFrame(User user, FileUserRepository repository) {
         setTitle("Expense Page");
         setSize(350, 300);

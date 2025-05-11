@@ -4,9 +4,16 @@ import model.Reminder;
 import java.time.*;
 import java.util.*;
 
+/**
+ * Manages reminders, including creation, display, and deletion.
+ */
 public class ReminderManager {
     private List<Reminder> reminders = new ArrayList<>();
 
+    /**
+     * Creates a new reminder from user input.
+     * @param sc the Scanner for user input
+     */
     public void createReminder(Scanner sc) {
         System.out.print("Enter reminder title (3-50 chars): ");
         String title = sc.nextLine().trim();
@@ -49,6 +56,10 @@ public class ReminderManager {
         scheduleNotification(r);
     }
 
+    /**
+     * Schedules a notification for a reminder.
+     * @param r the reminder to schedule
+     */
     private void scheduleNotification(Reminder r) {
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime reminderTime = LocalDateTime.of(r.getDate(), r.getTime());
@@ -70,10 +81,17 @@ public class ReminderManager {
         System.out.println(" Notification scheduled in " + (delay / 1000) + " seconds.");
     }
     
+    /**
+     * Gets the list of reminders.
+     * @return the list of reminders
+     */
     public List<Reminder> getReminders() {
         return reminders;
     }
 
+    /**
+     * Displays all reminders.
+     */
     public void displayReminders(){
         if (reminders.isEmpty()) {
             System.out.println("No reminders set.");
@@ -86,6 +104,10 @@ public class ReminderManager {
         }
     }
 
+    /**
+     * Deletes a reminder based on user input.
+     * @param sc the Scanner for user input
+     */
     public void deleteReminder(Scanner sc) {
     displayReminders();
     if (reminders.isEmpty()) return;

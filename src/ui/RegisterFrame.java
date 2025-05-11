@@ -3,11 +3,21 @@ package ui;
 import model.User;
 import repository.FileUserRepository;
 import service.AuthService;
-
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The registration frame for new users.
+ * <p>
+ * Allows the user to enter registration details and create an account.
+ * </p>
+ */
 public class RegisterFrame extends JFrame {
+    /**
+     * Constructs the RegisterFrame.
+     * @param authService the authentication service
+     * @param repository the user repository for saving data
+     */
     public RegisterFrame(AuthService authService, FileUserRepository repository) {
         setTitle("N3N3Ta7weesh - Register");
         setSize(400, 350);

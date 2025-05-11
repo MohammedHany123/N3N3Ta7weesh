@@ -7,7 +7,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.time.LocalDate;
 
+/**
+ * A frame for adding a new expense.
+ * <p>
+ * Allows the user to enter expense details and save them.
+ * </p>
+ */
 public class AddExpenseFrame extends JFrame {
+    /**
+     * Constructs the AddExpenseFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public AddExpenseFrame(User user, FileUserRepository repository) {
         setTitle("Add Expense");
         setSize(350, 300);

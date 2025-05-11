@@ -6,10 +6,19 @@ import service.*;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The login frame for user authentication.
+ * <p>
+ * Allows the user to enter credentials and log in.
+ * </p>
+ */
 public class LoginFrame extends JFrame {
     private final AuthService authService;
     private final FileUserRepository repository;
 
+    /**
+     * Constructs the LoginFrame.
+     */
     public LoginFrame() {        
         setTitle("N3N3Ta7weesh - Login");
         setSize(400, 260);

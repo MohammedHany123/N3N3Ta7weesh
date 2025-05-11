@@ -6,7 +6,16 @@ import service.*;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The application's home frame.
+ * <p>
+ * Provides options to register or log in.
+ * </p>
+ */
 public class HomeFrame extends JFrame {
+    /**
+     * Constructs the HomeFrame.
+     */
     public HomeFrame() {
         setTitle("N3N3Ta7weesh - Home");
         setSize(400, 260);

@@ -7,7 +7,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.time.LocalDate;
 
+/**
+ * A frame for editing an existing expense.
+ * <p>
+ * Allows the user to select and edit an expense record.
+ * </p>
+ */
 public class EditExpenseFrame extends JFrame {
+    /**
+     * Constructs the EditExpenseFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public EditExpenseFrame(User user, FileUserRepository repository) {
         setTitle("Edit Expense");
         setSize(500, 350);

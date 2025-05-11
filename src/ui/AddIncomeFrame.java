@@ -9,7 +9,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.time.LocalDate;
 
+/**
+ * A frame for adding a new income entry.
+ * <p>
+ * Allows the user to enter income details and save them.
+ * </p>
+ */
 public class AddIncomeFrame extends JFrame {
+    /**
+     * Constructs the AddIncomeFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public AddIncomeFrame(User user, FileUserRepository repository) {
         setTitle("Add Income");
         setSize(350, 250);
@@ -18,7 +29,6 @@ public class AddIncomeFrame extends JFrame {
 
         // Color palette
         Color bgColor = new Color(0xCBF3F0);
-        Color panelColor = new Color(0xFFFFFF);
         Color buttonColor = new Color(0x2EC4B6);
         Color buttonHover = new Color(0xFFBF69);
         Color textColor = Color.BLACK;

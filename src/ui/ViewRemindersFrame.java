@@ -5,7 +5,17 @@ import model.Reminder;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A frame for viewing all reminders.
+ * <p>
+ * Shows a table of all reminders.
+ * </p>
+ */
 public class ViewRemindersFrame extends JFrame {
+    /**
+     * Constructs the ViewRemindersFrame.
+     * @param user the current user
+     */
     public ViewRemindersFrame(User user) {
         setTitle("Reminders");
         setSize(500, 300);

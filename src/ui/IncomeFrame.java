@@ -5,7 +5,18 @@ import repository.FileUserRepository;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The main income management frame.
+ * <p>
+ * Allows the user to add income and view income summary.
+ * </p>
+ */
 public class IncomeFrame extends JFrame {
+    /**
+     * Constructs the IncomeFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public IncomeFrame(User user, FileUserRepository repository) {
         setTitle("Income Page");
         setSize(350, 220);

@@ -2,13 +2,23 @@ package ui;
 
 import model.User;
 import repository.FileUserRepository;
-
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The main dashboard frame after user login.
+ * <p>
+ * Provides navigation to all main features.
+ * </p>
+ */
 public class DashboardFrame extends JFrame {
+    /**
+     * Constructs the DashboardFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public DashboardFrame(User user, FileUserRepository repository) {
-setTitle("Dashboard - " + user.getUsername());
+        setTitle("Dashboard - " + user.getUsername());
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);

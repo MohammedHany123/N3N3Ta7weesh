@@ -5,7 +5,18 @@ import repository.FileUserRepository;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The main reminder management frame.
+ * <p>
+ * Allows the user to add, view, and delete reminders.
+ * </p>
+ */
 public class ReminderFrame extends JFrame {
+    /**
+     * Constructs the ReminderFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public ReminderFrame(User user, FileUserRepository repository) {
         setTitle("Reminder Page");
         setSize(350, 220);

@@ -6,7 +6,18 @@ import repository.FileUserRepository;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A frame for setting a new budget.
+ * <p>
+ * Allows the user to enter a category and budget amount.
+ * </p>
+ */
 public class SetBudgetFrame extends JFrame {
+    /**
+     * Constructs the SetBudgetFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public SetBudgetFrame(User user, FileUserRepository repository) {
         setTitle("Set Budget");
         setSize(350, 225);

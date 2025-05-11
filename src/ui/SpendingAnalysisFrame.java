@@ -7,7 +7,17 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * A frame for displaying spending analysis.
+ * <p>
+ * Shows a table of total spending by category.
+ * </p>
+ */
 public class SpendingAnalysisFrame extends JFrame {
+    /**
+     * Constructs the SpendingAnalysisFrame.
+     * @param user the current user
+     */
     public SpendingAnalysisFrame(User user) {
         setTitle("Spending Analysis");
         setSize(500, 300);

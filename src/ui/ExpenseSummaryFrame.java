@@ -5,7 +5,17 @@ import model.Expense;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A frame for displaying the expense summary.
+ * <p>
+ * Shows a table of all expenses and the total.
+ * </p>
+ */
 public class ExpenseSummaryFrame extends JFrame {
+    /**
+     * Constructs the ExpenseSummaryFrame.
+     * @param user the current user
+     */
     public ExpenseSummaryFrame(User user) {
         setTitle("Expense Summary");
         setSize(500, 300);

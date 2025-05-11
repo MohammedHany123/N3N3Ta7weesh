@@ -5,7 +5,17 @@ import model.Budget;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A frame for displaying all budgets.
+ * <p>
+ * Shows a table of budgets by category.
+ * </p>
+ */
 public class DisplayBudgetsFrame extends JFrame {
+    /**
+     * Constructs the DisplayBudgetsFrame.
+     * @param user the current user
+     */
     public DisplayBudgetsFrame(User user) {
         setTitle("Budgets");
         setSize(500, 300);

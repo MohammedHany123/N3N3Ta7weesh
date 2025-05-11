@@ -8,7 +8,18 @@ import java.awt.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/**
+ * A frame for adding a new reminder.
+ * <p>
+ * Allows the user to enter reminder details and save them.
+ * </p>
+ */
 public class AddReminderFrame extends JFrame {
+    /**
+     * Constructs the AddReminderFrame.
+     * @param user the current user
+     * @param repository the user repository for saving data
+     */
     public AddReminderFrame(User user, FileUserRepository repository) {
         setTitle("Add Reminder");
         setSize(350, 250);
