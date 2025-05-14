@@ -20,6 +20,9 @@ public class Reminder implements Serializable {
      * @param time  the reminder time
      */
     public Reminder(String title, LocalDate date, LocalTime time) {
+        if (date == null || !date.isAfter(LocalDate.now())) {
+            throw new IllegalArgumentException("Reminder date must be in the future.");
+        }
         this.title = title;
         this.date = date;
         this.time = time;
