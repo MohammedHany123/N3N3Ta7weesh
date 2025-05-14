@@ -1,22 +1,67 @@
+
+# N3N3Ta7weesh – GUI Version
+
+An enhanced version of the N3N3Ta7weesh budgeting application featuring a user-friendly Java Swing graphical interface.
+
+## Features
+
+- **Graphical User Interface**: Intuitive design using Java Swing.
+- **User Authentication**: Register and log in with OTP verification.
+- **Income & Expense Management**: Add, view, and manage financial records through the dashboard.
+- **Data Persistence**: Maintains user data using Java serialization.
+
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Prerequisites
 
-## Folder Structure
+- Java Development Kit (JDK) 8 or higher.
+- An IDE like IntelliJ IDEA or Eclipse (optional but recommended).
 
-The workspace contains two folders by default, where:
+### Installation
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+1. **Clone the Repository**:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+   ```bash
+   git clone -b gui https://github.com/MohammedHany123/N3N3Ta7weesh.git
+   cd N3N3Ta7weesh
+   ```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+2. **Compile the Application**:
+    ```bash
+    javac -d bin src/**/*.java
+    ```
 
-## Dependency Management
+3. **Run the Application**:
+   ```bash
+   java -cp bin Main
+   ```
 
-<<<<<<< HEAD
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-=======
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
->>>>>>> BudgetTracking
+## Usage
+Upon running the application
+- **Register:** Create a new account by providing your email, username, password, and phone number.
+- **Login:** Access your account using your credentials.
+- **Dashboard:** Navigate through options to add income, add expenses, view records, or logout.
+
+## Project Structure
+
+```css
+N3N3Ta7weesh/
+├── src/
+│   ├── model/
+│   ├── repository/
+│   ├── service/
+│   ├── ui/
+│   └── Main.java
+├── bin/
+├── doc/
+├── .vscode/
+└── README.md
+```
+
+## Authors
+- [Mohammed Hany](https://github.com/MohammedHany123)
+- [Ahmed Samir](https://github.com/Ahmed-Samir11)
+- [Loay Medhat](https://github.com/LoayMedhat)
+
+## License
+This project is licensed under the MIT License.
